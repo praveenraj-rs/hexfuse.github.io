@@ -1,0 +1,13 @@
+.SocialMedia {
+  display: flex;
+  gap: 15px;
+}
+
+.SocialMedia a:hover {
+  transform: scale(1.1); /* Scale on hover */
+}
+
+.SocialMedia a:hover svg {
+  fill: #71ff9c; /* Change the fill color on hover */
+  stroke: none;
+}
