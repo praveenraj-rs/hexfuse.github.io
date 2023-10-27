@@ -1,3 +1,12 @@
+:root {
+  --greenElement: #86efac;
+  --textBackground: #262626;
+  --boxBackground: #202020;
+  --pTextColor: #a3a3a3;
+  --soicalIcon: #a3a3a3;
+  --backgroundColor: hsl(0, 0%, 7%);
+}
+
 .about {
   width: 100%;
   height: 100vh;
@@ -7,8 +16,23 @@
   justify-content: center;
   align-items: center;
 
-  background-color: hsl(0, 0%, 7%);
+  background-color: var(--backgroundColor);
   color: white;
+}
+
+.borderBox {
+  padding: 30px;
+  padding-top: 50px;
+
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--boxBackground);
+  transition: border-color 1s;
+
+  margin-bottom: 20px;
 }
 
 .about h1 {
@@ -19,11 +43,29 @@
 .about p {
   font-size: 1.5rem;
   text-align: center;
+  color: var(--pTextColor);
+  margin-bottom: 5px;
 }
 
+.box2 {
+  width: 25rem;
+  height: 3rem;
+  padding: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 0 solid white;
+  border-radius: 10px;
+  background-color: var(--boxBackground);
+}
 .socialMedia {
   display: flex;
   gap: 15px;
+  border: 0 solid white;
+  border-radius: 10px;
+  background-color: var(--boxBackground);
 }
 
 .socialMedia a:hover {
@@ -31,10 +73,6 @@
 }
 
 .socialMedia a:hover svg {
-  fill: #71ff9c; /* Change the fill color on hover */
+  fill: var(--greenElement); /* Change the fill color on hover */
   stroke: none;
-}
-
-.check svg {
-  width: 30px;
 }

@@ -4,8 +4,8 @@ const Github = (props) => {
   const { width, height, fill, stroke } = props;
   return (
     <svg
-      width={width ? width : "50px"}
-      height={height ? width : "50px"}
+      width={width ? width : "40px"}
+      height={height ? height : "40px"}
       fill={fill ? fill : "white"}
       stroke={stroke ? stroke : "white"}
       //   newAttribute={valueProps?valueProps:defaultValue}

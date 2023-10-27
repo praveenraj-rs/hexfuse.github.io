@@ -1,6 +1,15 @@
+:root {
+  --socialIcon: #a3a3a3;
+}
+
 .SocialMedia {
   display: flex;
   gap: 15px;
+}
+
+.SocialMedia svg {
+  fill: var(--socialIcon);
+  stroke: var(--socialIcon);
 }
 
 .SocialMedia a:hover {
