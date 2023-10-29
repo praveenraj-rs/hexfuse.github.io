@@ -1,0 +1,64 @@
+:root {
+  --pTextColor: #a3a3a3;
+  --boxBackground: #202020;
+}
+
+nav {
+  padding: 0px 10px 0 10px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  color: var(--pTextColor);
+  background-color: var(--boxBackground);
+  position: sticky;
+  top: 0;
+}
+
+.brandIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.brandIcon h1 {
+  padding-left: 10px;
+  color: white;
+}
+.brandIcon a {
+  text-decoration: none;
+}
+
+.links {
+  display: flex;
+}
+
+.links li {
+  list-style: none;
+  padding-right: 20px;
+}
+
+.links li a {
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+  color: var(--pTextColor);
+  text-decoration: none;
+}
+
+.links li a:hover {
+  color: white;
+}
+
+.links li a.active {
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .brandIcon h1 {
+    display: none;
+  }
+}
