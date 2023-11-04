@@ -29,6 +29,7 @@ nav {
 .brandIcon h1 {
   padding-left: 10px;
   color: white;
+  margin: 10px;
 }
 .brandIcon a {
   text-decoration: none;
