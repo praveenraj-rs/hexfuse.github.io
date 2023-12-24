@@ -1,6 +1,8 @@
 :root {
   --pTextColor: #a3a3a3;
   --boxBackground: #202020;
+  --greenElement: #86efac;
+  --darkerGreenElement: #55d183;
 }
 
 nav {
@@ -30,6 +32,7 @@ nav {
   padding-left: 10px;
   color: white;
   margin: 10px;
+  font-size: 24px;
 }
 .brandIcon a {
   text-decoration: none;
@@ -43,11 +46,15 @@ nav {
   list-style: none;
   padding-right: 20px;
 }
+.links li:nth-child(4) {
+  padding-right: 5px;
+  margin-right: 5px;
+}
 
 .links li a {
   font-size: 1.1rem;
   font-weight: bold;
-  transition: color 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   color: var(--pTextColor);
   text-decoration: none;
 }
@@ -58,6 +65,12 @@ nav {
 
 .links li a.active {
   color: white;
+}
+
+.loginBtn {
+  border: 1px solid grey;
+  border-radius: 8px;
+  padding: 4px;
 }
 
 @media screen and (max-width: 600px) {

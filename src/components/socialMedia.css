@@ -10,6 +10,10 @@
 .SocialMedia svg {
   fill: var(--socialIcon);
   stroke: var(--socialIcon);
+  transition: all 0.3s ease;
+}
+.SocialMedia a {
+  transition: all 0.2s ease;
 }
 
 .SocialMedia a:hover {

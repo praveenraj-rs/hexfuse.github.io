@@ -1,12 +1,14 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import SocialMedia from "../components/socialMedia";
 import "./members.css";
 import { Employees } from "../data/members";
+import NavBar from "../components/navBar";
 
 const Member = (props) => {
   const { name, position, github, instagram, linkedin, img } = props;
   const [isHovering, setIsHovering] = useState(false);
+
   return (
     <div
       className="member"
@@ -37,31 +39,34 @@ const Member = (props) => {
 
 const Members = () => {
   return (
-    <div className="members">
-      <div className="headH1">
-        <h2>Co-Founders</h2>
+    <>
+      <NavBar />
+
+      <div className="members">
+        <div className="headH1">
+          <h2>Members</h2>
+        </div>
+        <div className="memberComponent">
+          {Employees.map(
+            ({ name, position, github, instagram, linkedin, img }, key) => {
+              return (
+                <div key={key}>
+                  <Member
+                    key={key}
+                    name={name}
+                    img={img}
+                    position={position}
+                    github={github}
+                    instagram={instagram}
+                    linkedin={linkedin}
+                  />
+                </div>
+              );
+            }
+          )}
+        </div>
       </div>
-      <div className="memberComponent">
-        {Employees.map(
-          ({ name, position, github, instagram, linkedin, img }, key) => {
-            console.log({ img });
-            return (
-              <div key={key}>
-                <Member
-                  key={key}
-                  name={name}
-                  img={img}
-                  position={position}
-                  github={github}
-                  instagram={instagram}
-                  linkedin={linkedin}
-                />
-              </div>
-            );
-          }
-        )}
-      </div>
-    </div>
+    </>
   );
 };
 
